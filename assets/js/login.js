@@ -66,7 +66,7 @@ $(function () {
                     layer.msg("登录成功");
                     /* 将获取的的token 值，存入到localStorage */
                     window.localStorage.setItem('token',res.token)
-                    window.location.href = '/index.html'
+                    window.location.href = '/大事件后台管理系统/index.html';
                 }
             })
     })  
