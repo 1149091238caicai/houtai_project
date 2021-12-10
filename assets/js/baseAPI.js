@@ -7,12 +7,9 @@ $.ajaxPrefilter(function(options){
     }
     /* 全局统一挂载 */
     options.complete = function(res){
-          /* 无论成功失败都会调用 */
-          console.log("执行",res.responseJSON.status)
-          if(res.responseJSON.status == 1){
+          if(res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！'){
               localStorage.removeItem('token');
               location.href='/大事件后台管理系统/login.html'
-
           }
     }
   
